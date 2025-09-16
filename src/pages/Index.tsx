@@ -1,10 +1,15 @@
-import { ArrowRight, Leaf, Home, Sparkles, MapPin, Phone, Mail, Waves, TreePine, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Leaf, Home, Sparkles, MapPin, Phone, Mail, Waves, TreePine, Shield, Zap, Eye, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import heroVilla from '@/assets/hero-villa.jpg';
 import villaInterior from '@/assets/villa-interior.jpg';
 import wellnessSpa from '@/assets/wellness-spa.jpg';
 import sustainableEstate from '@/assets/sustainable-estate.jpg';
+// New section images
+import smartHomeTech from '@/assets/smart-home-tech.jpg';
+import buildingAutomation from '@/assets/building-automation.jpg';
+import premiumBrands from '@/assets/premium-brands.jpg';
+import longevityCenter from '@/assets/longevity-center.jpg';
 // Gallery Images
 import villaLiving1 from '@/assets/villa-living-1.webp';
 import villaDining1 from '@/assets/villa-dining-1.webp';
@@ -133,249 +138,240 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Villa Features Section */}
-      <section className="py-16 sm:py-20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
-            <div className="animate-fade-in order-2 lg:order-1">
-              <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 sm:mb-10">
-                Cutting-Edge Technology & Modern Comforts
-              </h2>
-              <p className="font-inter text-lg sm:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed font-light">
-                Each villa features smart automation systems integrated with IoT technology, 
-                providing residents with a seamless, customizable living experience designed 
-                for optimal health and wellness.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
+      {/* Technology & Comforts Section */}
+      <section className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
+              Cutting-Edge Technology & Modern Comforts
+            </h2>
+            <p className="font-inter text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+              Each villa features smart automation systems integrated with IoT technology, 
+              providing residents with a seamless, customizable living experience designed 
+              for optimal health and wellness.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+            <div className="relative animate-scale-in">
+              <img 
+                src={smartHomeTech} 
+                alt="Cutting-edge smart home technology and IoT systems" 
+                className="rounded-xl shadow-luxury w-full h-auto"
+              />
+            </div>
+            
+            <div className="animate-fade-in">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                 {amenities.map((amenity, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
-                    <span className="text-foreground text-sm sm:text-base">{amenity}</span>
+                  <div key={index} className="flex items-center space-x-3 bg-card/60 backdrop-blur-sm rounded-lg p-4 border border-luxury/20">
+                    <div className="w-3 h-3 bg-primary rounded-full flex-shrink-0" />
+                    <span className="text-foreground font-medium">{amenity}</span>
                   </div>
                 ))}
               </div>
-
-                <div className="mt-10 sm:mt-12">
-                <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8">Building Automation Systems</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <Shield className="w-6 h-6 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-inter font-semibold text-foreground mb-2 text-lg">Automated Security System</h4>
-                      <p className="font-inter text-muted-foreground leading-relaxed">Sophisticated security with biometric access controls, facial recognition, and fingerprint scanning for entry into various zones</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Zap className="w-6 h-6 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Fire and Disaster Response Automation</h4>
-                      <p className="text-muted-foreground">Integrated fire suppression, smoke detection, and emergency response systems that coordinate evacuation and containment efforts</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Shield className="w-6 h-6 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Robotic and Automated Surveillance</h4>
-                      <p className="text-muted-foreground">Extensive CCTV and AI-powered surveillance to monitor activities continuously, enhancing security and safety</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Home className="w-6 h-6 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Smart Lighting and Climate Control</h4>
-                      <p className="text-muted-foreground">Automated lighting and HVAC systems for energy efficiency, comfort, and safety, adjusting based on occupancy and environmental conditions</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Sparkles className="w-6 h-6 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Personalized Resident Automation</h4>
-                      <p className="text-muted-foreground">Smart home automation systems allowing residents to control lighting, temperature, and security remotely via smart devices</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <ArrowRight className="w-6 h-6 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Automated Elevators</h4>
-                      <p className="text-muted-foreground">Highly advanced elevator systems with automation allowing for quick, efficient, and safe transport, including emergency protocols</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Shield className="w-6 h-6 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Integrated Lockdown and Emergency Protocols</h4>
-                      <p className="text-muted-foreground">Crisis scenarios automation can lock down certain areas or sections to contain threats, with assistance in rapid evacuation</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-16">
-                <h3 className="font-playfair text-4xl font-bold text-foreground mb-10 text-center">Premium Brand Partnerships</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20 hover:border-luxury/40">
-                    <CardContent className="p-8 text-center">
-                      <Zap className="w-10 h-10 text-primary mx-auto mb-4" />
-                      <h4 className="font-playfair font-bold text-foreground mb-3 text-lg">Smart Home Tech</h4>
-                      <p className="text-luxury text-xl font-bold">Loytec</p>
-                      <p className="font-inter text-muted-foreground text-sm mt-3">Advanced building automation systems</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Sparkles className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Private Cinema</h4>
-                      <p className="text-luxury text-lg font-semibold">Premium Entertainment</p>
-                      <p className="text-muted-foreground text-sm mt-2">State-of-the-art home theater systems</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Home className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Private Gym</h4>
-                      <p className="text-luxury text-lg font-semibold">Technogym</p>
-                      <p className="text-muted-foreground text-sm mt-2">Professional-grade fitness equipment</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Sparkles className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Lighting</h4>
-                      <p className="text-luxury text-lg font-semibold">Lalique</p>
-                      <p className="text-muted-foreground text-sm mt-2">Exquisite crystal lighting fixtures</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Sparkles className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Glassware</h4>
-                      <p className="text-luxury text-lg font-semibold">Baccarat</p>
-                      <p className="text-muted-foreground text-sm mt-2">World-renowned crystal glassware</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Home className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Kitchens</h4>
-                      <p className="text-luxury text-lg font-semibold">Gaggenau</p>
-                      <p className="text-muted-foreground text-sm mt-2">Premium German kitchen appliances</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Home className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Furniture</h4>
-                      <p className="text-luxury text-lg font-semibold">Bentley</p>
-                      <p className="text-muted-foreground text-sm mt-2">Luxury automotive-inspired furniture</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Sparkles className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Dishes</h4>
-                      <p className="text-luxury text-lg font-semibold">Bernardaud</p>
-                      <p className="text-muted-foreground text-sm mt-2">French porcelain fine dining collection</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Sparkles className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Flatware</h4>
-                      <p className="text-luxury text-lg font-semibold">Christofle</p>
-                      <p className="text-muted-foreground text-sm mt-2">Prestigious French silverware</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Home className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Bed Linen</h4>
-                      <p className="text-luxury text-lg font-semibold">Frette</p>
-                      <p className="text-muted-foreground text-sm mt-2">Italian luxury bedding and linens</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-
-              <Button variant="premium" size="lg" className="shadow-luxury mt-8">
-                Explore Villa Plans <ArrowRight className="ml-2" />
+              <Button variant="premium" size="lg" className="shadow-luxury">
+                Explore Smart Features <ArrowRight className="ml-2" />
               </Button>
             </div>
+          </div>
 
-            <div className="relative animate-scale-in order-1 lg:order-2">
+          {/* Building Automation Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-fade-in">
+              <h3 className="font-playfair text-4xl font-bold text-foreground mb-8">Building Automation Systems</h3>
+              <p className="font-inter text-xl text-muted-foreground mb-10 leading-relaxed font-light">
+                Our state-of-the-art building automation ensures maximum security, efficiency, and convenience through intelligent system integration.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-5 bg-card/60 backdrop-blur-sm rounded-xl p-6 border border-luxury/20">
+                  <Shield className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-inter font-bold text-foreground mb-3 text-lg">Automated Security System</h4>
+                    <p className="font-inter text-muted-foreground leading-relaxed">Sophisticated security with biometric access controls, facial recognition, and fingerprint scanning</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-5 bg-card/60 backdrop-blur-sm rounded-xl p-6 border border-luxury/20">
+                  <Zap className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-inter font-bold text-foreground mb-3 text-lg">Smart Climate & Lighting</h4>
+                    <p className="font-inter text-muted-foreground leading-relaxed">Automated HVAC and lighting systems that adapt to your preferences and optimize energy efficiency</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-5 bg-card/60 backdrop-blur-sm rounded-xl p-6 border border-luxury/20">
+                  <Home className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-inter font-bold text-foreground mb-3 text-lg">Emergency Response Automation</h4>
+                    <p className="font-inter text-muted-foreground leading-relaxed">Integrated fire suppression, emergency protocols, and automated safety systems</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative animate-scale-in">
               <img 
-                src={villaInterior} 
-                alt="Luxury Villa Interior" 
-                className="rounded-lg shadow-luxury w-full h-auto max-h-80 sm:max-h-96 object-cover"
+                src={buildingAutomation} 
+                alt="Building automation control systems and monitoring" 
+                className="rounded-xl shadow-luxury w-full h-auto"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Wellness Section */}
-      <section className="py-20 bg-gradient-wellness">
+      {/* Premium Brand Partnerships Section */}
+      <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
+              Premium Brand Partnerships
+            </h2>
+            <p className="font-inter text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+              We've partnered with the world's most prestigious luxury brands to ensure every detail 
+              of your villa meets the highest standards of elegance and sophistication.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
             <div className="relative animate-scale-in">
               <img 
-                src={wellnessSpa} 
-                alt="Wellness & Spa Area" 
-                className="rounded-lg shadow-luxury w-full h-auto"
+                src={premiumBrands} 
+                alt="Premium luxury brand partnerships and high-end products" 
+                className="rounded-xl shadow-luxury w-full h-auto"
               />
             </div>
-
+            
             <div className="animate-fade-in">
-              <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
-                Focus on Healthy Living & Longevity
-              </h2>
-              <p className="font-inter text-xl text-muted-foreground mb-10 leading-relaxed font-light">
-                Our villas incorporate eco-friendly construction materials and intelligent design 
-                principles, promoting optimal indoor air quality, natural light, and ventilation 
-                to support long-term health and vitality.
-              </p>
-              
-              <div className="bg-card/60 backdrop-blur-sm rounded-xl p-8 mb-10 border border-luxury/20 shadow-card">
-                <p className="font-inter text-lg text-muted-foreground leading-relaxed">
-                  Experience a one-of-a-kind menu of cutting-edge therapies designed to meet specific health, 
-                  fitness, and aesthetic goals. World-renowned modalities like <strong className="text-primary font-semibold">Whole Body Cryotherapy</strong>, 
-                  <strong className="text-primary font-semibold">IV Drip Therapy</strong>, <strong className="text-primary font-semibold">Red Light Therapy</strong>, 
-                  <strong className="text-primary font-semibold">EMS Training</strong>, and many others, once reserved only for elite athletes 
-                  and celebrities, form the backbone of our transformative health protocols – guaranteed to help you lose weight, 
-                  look younger, build healthy habits, and feel truly energized. This isn't just any other wellness protocol – 
-                  it's a carefully curated space where science and personalized care converge for the very best quality of life outcomes & results.
-                </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20 hover:border-luxury/40 group">
+                  <CardContent className="p-8 text-center">
+                    <Zap className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="font-playfair font-bold text-foreground mb-3 text-xl">Smart Home Tech</h4>
+                    <p className="text-luxury text-2xl font-bold mb-2">Loytec</p>
+                    <p className="font-inter text-muted-foreground">Advanced building automation systems</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20 hover:border-luxury/40 group">
+                  <CardContent className="p-8 text-center">
+                    <Home className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="font-playfair font-bold text-foreground mb-3 text-xl">Kitchens</h4>
+                    <p className="text-luxury text-2xl font-bold mb-2">Gaggenau</p>
+                    <p className="font-inter text-muted-foreground">Premium German kitchen appliances</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20 hover:border-luxury/40 group">
+                  <CardContent className="p-8 text-center">
+                    <Sparkles className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="font-playfair font-bold text-foreground mb-3 text-xl">Crystal Lighting</h4>
+                    <p className="text-luxury text-2xl font-bold mb-2">Lalique</p>
+                    <p className="font-inter text-muted-foreground">Exquisite crystal lighting fixtures</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20 hover:border-luxury/40 group">
+                  <CardContent className="p-8 text-center">
+                    <Home className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="font-playfair font-bold text-foreground mb-3 text-xl">Luxury Linens</h4>
+                    <p className="text-luxury text-2xl font-bold mb-2">Frette</p>
+                    <p className="font-inter text-muted-foreground">Italian luxury bedding and linens</p>
+                  </CardContent>
+                </Card>
               </div>
               
-              <div className="space-y-6 mb-10">
-                <div className="flex items-start space-x-5">
-                  <Sparkles className="w-7 h-7 text-primary mt-1 flex-shrink-0" />
+              <div className="mt-10">
+                <Button variant="premium" size="lg" className="shadow-luxury w-full">
+                  View All Brand Partners <ExternalLink className="ml-2" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Longevity & Wellness Section */}
+      <section className="py-20 bg-gradient-wellness">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
+              Focus on Healthy Living & Longevity
+            </h2>
+            <p className="font-inter text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+              Our villas incorporate eco-friendly construction materials and intelligent design 
+              principles, promoting optimal indoor air quality, natural light, and ventilation 
+              to support long-term health and vitality.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-fade-in">
+              <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-10 mb-10 border border-luxury/30 shadow-luxury">
+                <h3 className="font-playfair text-3xl font-bold text-foreground mb-6">Cutting-Edge Wellness Technologies</h3>
+                <p className="font-inter text-lg text-muted-foreground leading-relaxed mb-8">
+                  Experience a one-of-a-kind menu of cutting-edge therapies designed to meet specific health, 
+                  fitness, and aesthetic goals. World-renowned modalities once reserved only for elite athletes 
+                  and celebrities, now available in your private sanctuary.
+                </p>
+                
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center p-4 bg-primary/10 rounded-xl">
+                    <h4 className="font-bold text-primary text-lg mb-2">Cryotherapy</h4>
+                    <p className="text-sm text-muted-foreground">Whole body cold therapy</p>
+                  </div>
+                  <div className="text-center p-4 bg-primary/10 rounded-xl">
+                    <h4 className="font-bold text-primary text-lg mb-2">IV Therapy</h4>
+                    <p className="text-sm text-muted-foreground">Personalized nutrient infusions</p>
+                  </div>
+                  <div className="text-center p-4 bg-primary/10 rounded-xl">
+                    <h4 className="font-bold text-primary text-lg mb-2">Red Light</h4>
+                    <p className="text-sm text-muted-foreground">Cellular regeneration therapy</p>
+                  </div>
+                  <div className="text-center p-4 bg-primary/10 rounded-xl">
+                    <h4 className="font-bold text-primary text-lg mb-2">EMS Training</h4>
+                    <p className="text-sm text-muted-foreground">Electrical muscle stimulation</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-5 bg-card/60 backdrop-blur-sm rounded-xl p-6 border border-luxury/20">
+                  <Sparkles className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-inter font-semibold text-foreground mb-3 text-lg">Biohacking Zones</h4>
+                    <h4 className="font-inter font-bold text-foreground mb-3 text-lg">Biohacking Zones</h4>
                     <p className="font-inter text-muted-foreground leading-relaxed">Dedicated areas for infrared therapy, oxygen enrichment, and personalized wellness practices</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-5">
-                  <Waves className="w-7 h-7 text-primary mt-1 flex-shrink-0" />
+                <div className="flex items-start space-x-5 bg-card/60 backdrop-blur-sm rounded-xl p-6 border border-luxury/20">
+                  <Waves className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-inter font-semibold text-foreground mb-3 text-lg">Hydrotherapy Options</h4>
+                    <h4 className="font-inter font-bold text-foreground mb-3 text-lg">Hydrotherapy Suites</h4>
                     <p className="font-inter text-muted-foreground leading-relaxed">Private pools, saunas, and water-based wellness features for relaxation and detoxification</p>
                   </div>
                 </div>
               </div>
 
-              <Button variant="wellness" size="lg" className="shadow-card font-inter">
-                Learn About Wellness Features <ArrowRight className="ml-2" />
-              </Button>
+              <div className="mt-10">
+                <Button variant="wellness" size="lg" className="shadow-card font-inter w-full">
+                  Explore Wellness Programs <ArrowRight className="ml-2" />
+                </Button>
+              </div>
+            </div>
+
+            <div className="relative animate-scale-in">
+              <img 
+                src={longevityCenter} 
+                alt="Modern longevity and wellness center with biohacking equipment" 
+                className="rounded-2xl shadow-luxury w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <h4 className="font-playfair text-2xl font-bold mb-2">Longevity Center</h4>
+                <p className="text-white/90">State-of-the-art wellness technology</p>
+              </div>
             </div>
           </div>
         </div>
@@ -453,160 +449,175 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16 sm:py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-16 sm:mb-20 animate-fade-in">
-            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">Villa Gallery</h2>
-            <p className="font-inter text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto font-light px-4">
-              Explore the exquisite interiors and sophisticated design of our luxury villas
+      {/* Villa Gallery Section */}
+      <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">Villa Gallery</h2>
+            <p className="font-inter text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+              Step inside our meticulously designed villas where every room tells a story of luxury, 
+              comfort, and sophisticated living. Each space has been curated to perfection.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 animate-scale-in">
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
-                <img 
-                  src={villaLiving1} 
-                  alt="Luxury Villa Living Room with Modern Furniture" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-lg">Living Room</h4>
-                    <p className="text-sm opacity-90">Modern luxury furniture</p>
+          {/* Featured Gallery Item */}
+          <div className="mb-16 animate-scale-in">
+            <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-luxury hover:shadow-glow transition-all duration-500">
+              <img 
+                src={villaLiving2} 
+                alt="Spectacular villa living space with panoramic views" 
+                className="w-full h-96 lg:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                <div className="absolute bottom-8 left-8 text-white">
+                  <h3 className="font-playfair text-3xl lg:text-4xl font-bold mb-4">Main Living Area</h3>
+                  <p className="text-xl text-white/90 mb-4">Where luxury meets comfort in perfect harmony</p>
+                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black">
+                    <Eye className="w-5 h-5 mr-2" />
+                    View Details
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Gallery Grid */}
+          <div className="space-y-12">
+            {/* Row 1 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
+              <div className="md:col-span-2">
+                <div className="group cursor-pointer overflow-hidden rounded-xl shadow-luxury hover:shadow-glow transition-all duration-500 h-80">
+                  <img 
+                    src={villaKitchen1} 
+                    alt="Gourmet kitchen with Gaggenau appliances" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <h4 className="font-playfair text-2xl font-bold mb-2">Gourmet Kitchen</h4>
+                      <p className="text-white/90">Gaggenau appliances & premium finishes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="group cursor-pointer overflow-hidden rounded-xl shadow-luxury hover:shadow-glow transition-all duration-500 h-36">
+                  <img 
+                    src={villaDining1} 
+                    alt="Elegant dining area" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-3 left-3 text-white">
+                      <h5 className="font-bold">Dining Area</h5>
+                    </div>
+                  </div>
+                </div>
+                <div className="group cursor-pointer overflow-hidden rounded-xl shadow-luxury hover:shadow-glow transition-all duration-500 h-36">
+                  <img 
+                    src={villaOffice1} 
+                    alt="Private office space" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-3 left-3 text-white">
+                      <h5 className="font-bold">Private Office</h5>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
-                <img 
-                  src={villaDining1} 
-                  alt="Elegant Villa Dining Area with Premium Furnishing" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-lg">Dining Area</h4>
-                    <p className="text-sm opacity-90">Elegant dining experience</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
-                <img 
-                  src={villaKitchen1} 
-                  alt="Gourmet Kitchen with Gaggenau Appliances" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-lg">Gourmet Kitchen</h4>
-                    <p className="text-sm opacity-90">Gaggenau appliances</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
+            {/* Row 2 */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 animate-fade-in">
+              <div className="group cursor-pointer overflow-hidden rounded-xl shadow-luxury hover:shadow-glow transition-all duration-500 h-64">
                 <img 
                   src={villaBedroom1} 
-                  alt="Master Bedroom with Frette Linens" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  alt="Master bedroom with luxury linens" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-lg">Master Bedroom</h4>
-                    <p className="text-sm opacity-90">Luxury Frette linens</p>
+                    <h5 className="font-bold">Master Bedroom</h5>
+                    <p className="text-sm text-white/90">Frette linens</p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
-                <img 
-                  src={villaOffice1} 
-                  alt="Private Office Space with Garden Views" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-lg">Private Office</h4>
-                    <p className="text-sm opacity-90">Garden view workspace</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
+              <div className="group cursor-pointer overflow-hidden rounded-xl shadow-luxury hover:shadow-glow transition-all duration-500 h-64">
                 <img 
                   src={villaCloset1} 
-                  alt="Walk-in Closet with Premium Organization" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  alt="Walk-in closet" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-lg">Walk-in Closet</h4>
-                    <p className="text-sm opacity-90">Premium organization</p>
+                    <h5 className="font-bold">Walk-in Closet</h5>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
+              <div className="group cursor-pointer overflow-hidden rounded-xl shadow-luxury hover:shadow-glow transition-all duration-500 h-64">
                 <img 
                   src={villaSpa1} 
-                  alt="Private Spa and Wellness Area" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  alt="Private spa area" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-lg">Private Spa</h4>
-                    <p className="text-sm opacity-90">Wellness sanctuary</p>
+                    <h5 className="font-bold">Private Spa</h5>
+                    <p className="text-sm text-white/90">Wellness sanctuary</p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
+              <div className="group cursor-pointer overflow-hidden rounded-xl shadow-luxury hover:shadow-glow transition-all duration-500 h-64">
                 <img 
                   src={villaCinema1} 
-                  alt="Private Cinema with Premium Entertainment" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  alt="Private cinema" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-lg">Private Cinema</h4>
-                    <p className="text-sm opacity-90">Premium entertainment</p>
+                    <h5 className="font-bold">Private Cinema</h5>
+                    <p className="text-sm text-white/90">Premium entertainment</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
+            {/* Row 3 - Showcase */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+              <div className="group cursor-pointer overflow-hidden rounded-xl shadow-luxury hover:shadow-glow transition-all duration-500 h-80">
                 <img 
                   src={villaLiving3} 
-                  alt="Open Concept Living Space" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  alt="Open concept living space" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="font-semibold text-lg">Open Living Space</h4>
-                    <p className="text-sm opacity-90">Seamless indoor-outdoor flow</p>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h4 className="font-playfair text-2xl font-bold mb-2">Open Living Space</h4>
+                    <p className="text-white/90">Seamless indoor-outdoor flow</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group cursor-pointer overflow-hidden rounded-xl shadow-luxury hover:shadow-glow transition-all duration-500 h-80">
+                <img 
+                  src={villaLiving1} 
+                  alt="Luxury living room" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h4 className="font-playfair text-2xl font-bold mb-2">Living Room</h4>
+                    <p className="text-white/90">Contemporary luxury design</p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <Button variant="premium" size="lg" className="shadow-luxury">
+              Schedule Virtual Tour <ArrowRight className="ml-2" />
+            </Button>
           </div>
         </div>
       </section>
