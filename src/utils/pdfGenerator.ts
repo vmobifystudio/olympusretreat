@@ -15,7 +15,7 @@ export const generateBrochurePDF = async () => {
   pdf.setTextColor(255, 255, 255);
   pdf.setFontSize(28);
   pdf.setFont('helvetica', 'bold');
-  pdf.text('LUXURY VILLA ESTATE', pageWidth / 2, 50, { align: 'center' });
+  pdf.text('OLYMPUS RETREAT', pageWidth / 2, 50, { align: 'center' });
   
   pdf.setFontSize(16);
   pdf.setFont('helvetica', 'normal');
@@ -115,14 +115,14 @@ Each villa features comprehensive building automation including sophisticated se
   pdf.setFontSize(12);
   pdf.setFont('helvetica', 'normal');
   pdf.text('Phone: +91 XXX XXX XXXX', margin, 195);
-  pdf.text('Email: info@luxuryvillas.com', margin, 205);
+  pdf.text('Email: info@olympusretreat.com', margin, 205);
   pdf.text('Location: 30 km from Pune, Maharashtra', margin, 215);
   
   // Footer
   pdf.setFontSize(8);
   pdf.setTextColor(128, 128, 128);
-  pdf.text('© 2024 Luxury Villa Estate. All rights reserved.', pageWidth / 2, pageHeight - 10, { align: 'center' });
+  pdf.text('© 2024 Olympus Retreat. All rights reserved.', pageWidth / 2, pageHeight - 10, { align: 'center' });
   
   // Save the PDF
-  pdf.save('luxury-villa-estate-brochure.pdf');
+  pdf.save('olympus-retreat-brochure.pdf');
 };

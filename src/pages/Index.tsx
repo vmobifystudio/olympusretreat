@@ -73,7 +73,7 @@ const Index = () => {
         
         <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center text-white py-20">
           <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 sm:mb-8 animate-fade-in-up leading-tight">
-            Luxury Villa Estate
+            Olympus Retreat
             <span className="block text-luxury font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-6xl mt-4 sm:mt-6 font-medium">
               Where Wellness Meets Elegance
             </span>
