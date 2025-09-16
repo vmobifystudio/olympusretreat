@@ -581,7 +581,7 @@ const Index = () => {
           
           <div className="border-t border-white/20 pt-8 text-center">
             <p className="font-inter text-sm opacity-60">
-              © 2024 Luxury Villa Estate. All rights reserved.
+              © 2024 Olympus Retreat. All rights reserved.
             </p>
           </div>
         </div>

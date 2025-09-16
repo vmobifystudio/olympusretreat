@@ -15,7 +15,6 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { id: 'hero', label: 'Home', icon: Home },
     { id: 'gallery', label: 'Gallery', icon: Image },
     { id: 'features', label: 'Features', icon: Sparkles },
     { id: 'wellness', label: 'Wellness', icon: Leaf },
@@ -28,12 +27,15 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <button 
+            onClick={() => scrollToSection('hero')}
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
               <Home className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">Olympus Retreat</span>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -47,22 +49,6 @@ const Navigation = () => {
                 <span>{item.label}</span>
               </button>
             ))}
-            
-            {/* Legal Links */}
-            <div className="flex items-center space-x-4 ml-8 border-l border-border pl-8">
-              <Link 
-                to="/privacy-policy" 
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Privacy
-              </Link>
-              <Link 
-                to="/terms-of-service" 
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Terms
-              </Link>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -90,23 +76,6 @@ const Navigation = () => {
                   <span>{item.label}</span>
                 </button>
               ))}
-              
-              <div className="flex flex-col space-y-2 pt-4 border-t border-border">
-                <Link 
-                  to="/privacy-policy" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Privacy Policy
-                </Link>
-                <Link 
-                  to="/terms-of-service" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Terms of Service
-                </Link>
-              </div>
             </div>
           </div>
         )}
