@@ -2,6 +2,7 @@ import { ArrowRight, Leaf, Home, Sparkles, MapPin, Phone, Mail, Waves, TreePine,
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { VillaCarouselGallery } from '@/components/VillaCarouselGallery';
+import Navigation from '@/components/Navigation';
 import heroVilla from '@/assets/hero-villa.jpg';
 import villaInterior from '@/assets/villa-interior.jpg';
 import wellnessSpa from '@/assets/wellness-spa.jpg';
@@ -60,8 +61,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroVilla})` }}
@@ -101,7 +104,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 sm:py-20 bg-gradient-luxury">
+      <section id="features" className="py-16 sm:py-20 bg-gradient-luxury">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16 sm:mb-20 animate-fade-in">
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 sm:mb-8">
@@ -129,7 +132,7 @@ const Index = () => {
       </section>
 
       {/* Technology & Comforts Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section id="technology" className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
@@ -274,7 +277,7 @@ const Index = () => {
       </section>
 
       {/* Longevity & Wellness Section */}
-      <section className="py-20 bg-gradient-wellness">
+      <section id="wellness" className="py-20 bg-gradient-wellness">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
@@ -367,7 +370,7 @@ const Index = () => {
       </section>
 
       {/* Sustainability Section */}
-      <section className="py-20">
+      <section id="sustainability" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
@@ -439,7 +442,7 @@ const Index = () => {
       </section>
 
       {/* Villa Gallery Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
+      <section id="gallery" className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">Villa Gallery</h2>
