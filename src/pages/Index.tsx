@@ -66,29 +66,29 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroVilla})` }}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         
-        <div className="relative z-10 container mx-auto px-6 text-center text-white">
-          <h1 className="font-playfair text-hero md:text-8xl font-bold mb-8 animate-fade-in-up leading-tight">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center text-white py-20">
+          <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 sm:mb-8 animate-fade-in-up leading-tight">
             Luxury Villa Estate
-            <span className="block text-luxury font-playfair text-hero-sm md:text-6xl mt-6 font-medium">
+            <span className="block text-luxury font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-6xl mt-4 sm:mt-6 font-medium">
               Where Wellness Meets Elegance
             </span>
           </h1>
-          <p className="font-inter text-xl md:text-2xl mb-12 max-w-4xl mx-auto opacity-90 animate-fade-in-up leading-relaxed font-light">
+          <p className="font-inter text-lg sm:text-xl md:text-2xl mb-10 sm:mb-12 max-w-4xl mx-auto opacity-90 animate-fade-in-up leading-relaxed font-light px-4">
             50 exclusive villas on 12 pristine acres, surrounded by water and nature, 
             designed for longevity, health, and sustainable luxury living.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-scale-in">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-scale-in px-4">
             <Button 
               size="lg" 
               variant="luxury" 
-              className="text-lg px-10 py-5 font-inter"
+              className="text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 font-inter w-full sm:w-auto"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Schedule a Visit <ArrowRight className="ml-2" />
@@ -96,7 +96,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="hero" 
-              className="text-lg px-10 py-5 font-inter"
+              className="text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 font-inter w-full sm:w-auto"
               onClick={generateBrochurePDF}
             >
               Download Brochure
@@ -106,26 +106,26 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-gradient-luxury">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-8">
+      <section className="py-16 sm:py-20 bg-gradient-luxury">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16 sm:mb-20 animate-fade-in">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 sm:mb-8">
               A Sanctuary for Rejuvenation
             </h2>
-            <p className="font-inter text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="font-inter text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light px-4">
               Nestled just 30 km from Pune city, this exclusive estate offers an unparalleled living 
               experience with unpolluted air, lush greenery, and towering trees. Our vision prioritizes 
               cellular health, mental clarity, and resilience in harmony with nature.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="shadow-card hover:shadow-luxury transition-all duration-300 transform hover:scale-105 animate-fade-in">
-                <CardContent className="p-8 text-center">
-                  <feature.icon className="w-14 h-14 text-primary mx-auto mb-6" />
-                  <h3 className="font-playfair text-2xl font-semibold mb-4 text-foreground">{feature.title}</h3>
-                  <p className="font-inter text-muted-foreground leading-relaxed">{feature.description}</p>
+                <CardContent className="p-6 sm:p-8 text-center">
+                  <feature.icon className="w-12 sm:w-14 h-12 sm:h-14 text-primary mx-auto mb-4 sm:mb-6" />
+                  <h3 className="font-playfair text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-foreground">{feature.title}</h3>
+                  <p className="font-inter text-sm sm:text-base text-muted-foreground leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -134,30 +134,30 @@ const Index = () => {
       </section>
 
       {/* Villa Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="animate-fade-in">
-              <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
+      <section className="py-16 sm:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+            <div className="animate-fade-in order-2 lg:order-1">
+              <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 sm:mb-10">
                 Cutting-Edge Technology & Modern Comforts
               </h2>
-              <p className="font-inter text-xl text-muted-foreground mb-10 leading-relaxed font-light">
+              <p className="font-inter text-lg sm:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed font-light">
                 Each villa features smart automation systems integrated with IoT technology, 
                 providing residents with a seamless, customizable living experience designed 
                 for optimal health and wellness.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
                 {amenities.map((amenity, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="text-foreground">{amenity}</span>
+                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
+                    <span className="text-foreground text-sm sm:text-base">{amenity}</span>
                   </div>
                 ))}
               </div>
 
-                <div className="mt-12">
-                <h3 className="font-playfair text-3xl font-bold text-foreground mb-8">Building Automation Systems</h3>
+                <div className="mt-10 sm:mt-12">
+                <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8">Building Automation Systems</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
                     <Shield className="w-6 h-6 text-primary mt-1" />
@@ -311,11 +311,11 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="relative animate-scale-in">
+            <div className="relative animate-scale-in order-1 lg:order-2">
               <img 
                 src={villaInterior} 
                 alt="Luxury Villa Interior" 
-                className="rounded-lg shadow-luxury w-full h-auto"
+                className="rounded-lg shadow-luxury w-full h-auto max-h-80 sm:max-h-96 object-cover"
               />
             </div>
           </div>
@@ -454,16 +454,16 @@ const Index = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-6">Villa Gallery</h2>
-            <p className="font-inter text-xl text-muted-foreground max-w-2xl mx-auto font-light">
+      <section className="py-16 sm:py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16 sm:mb-20 animate-fade-in">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">Villa Gallery</h2>
+            <p className="font-inter text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto font-light px-4">
               Explore the exquisite interiors and sophisticated design of our luxury villas
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-scale-in">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 animate-scale-in">
             <div className="group cursor-pointer">
               <div className="relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300">
                 <img 
@@ -612,38 +612,38 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-10">
+      <section id="contact" className="py-16 sm:py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16 sm:mb-20 animate-fade-in">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 sm:mb-10">
               Begin Your Wellness Journey
             </h2>
-            <p className="font-inter text-xl opacity-90 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="font-inter text-lg sm:text-xl opacity-90 max-w-3xl mx-auto leading-relaxed font-light px-4">
               Discover a lifestyle that supports cellular health, mental clarity, and resilience. 
               Contact us to schedule a private viewing of your future sanctuary.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-start">
             <div className="animate-fade-in">
-              <h3 className="font-playfair text-3xl font-semibold mb-10">Get in Touch</h3>
-              <div className="space-y-8">
-                <div className="flex items-center space-x-5">
-                  <Phone className="w-7 h-7 text-luxury" />
+              <h3 className="font-playfair text-2xl sm:text-3xl font-semibold mb-8 sm:mb-10">Get in Touch</h3>
+              <div className="space-y-6 sm:space-y-8">
+                <div className="flex items-center space-x-4 sm:space-x-5">
+                  <Phone className="w-6 sm:w-7 h-6 sm:h-7 text-luxury flex-shrink-0" />
                   <div>
                     <p className="font-inter font-semibold text-lg">Call Us</p>
                     <p className="font-inter opacity-90 text-lg">+91 989 578 7491</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-5">
-                  <Mail className="w-7 h-7 text-luxury" />
+                <div className="flex items-center space-x-4 sm:space-x-5">
+                  <Mail className="w-6 sm:w-7 h-6 sm:h-7 text-luxury flex-shrink-0" />
                   <div>
                     <p className="font-inter font-semibold text-lg">Email</p>
                     <p className="font-inter opacity-90 text-lg">info@everluxeglobal.com</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-5">
-                  <MapPin className="w-7 h-7 text-luxury" />
+                <div className="flex items-center space-x-4 sm:space-x-5">
+                  <MapPin className="w-6 sm:w-7 h-6 sm:h-7 text-luxury flex-shrink-0" />
                   <div>
                     <p className="font-inter font-semibold text-lg">Location</p>
                     <p className="font-inter opacity-90 text-lg">30 km from Pune, Maharashtra</p>
@@ -654,28 +654,28 @@ const Index = () => {
 
             <div className="animate-scale-in">
                 <Card className="shadow-luxury">
-                  <CardContent className="p-10">
-                    <h3 className="font-playfair text-3xl font-semibold text-foreground mb-8">Request Information</h3>
-                    <div className="space-y-6">
+                  <CardContent className="p-8 sm:p-10">
+                    <h3 className="font-playfair text-2xl sm:text-3xl font-semibold text-foreground mb-6 sm:mb-8">Request Information</h3>
+                    <div className="space-y-4 sm:space-y-6">
                       <input 
                         type="text" 
                         placeholder="Your Name" 
-                        className="w-full p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent font-inter"
+                        className="w-full p-4 sm:p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent font-inter text-sm sm:text-base"
                       />
                       <input 
                         type="email" 
                         placeholder="Email Address" 
-                        className="w-full p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent font-inter"
+                        className="w-full p-4 sm:p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent font-inter text-sm sm:text-base"
                       />
                       <input 
                         type="tel" 
                         placeholder="Phone Number" 
-                        className="w-full p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent font-inter"
+                        className="w-full p-4 sm:p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent font-inter text-sm sm:text-base"
                       />
                       <textarea 
                         placeholder="Tell us about your interests" 
                         rows={4}
-                        className="w-full p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent resize-none font-inter"
+                        className="w-full p-4 sm:p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent resize-none font-inter text-sm sm:text-base"
                       />
                       <Button variant="luxury" size="lg" className="w-full shadow-luxury font-inter">
                         Submit Inquiry <ArrowRight className="ml-2" />
