@@ -74,21 +74,21 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero" />
         
         <div className="relative z-10 container mx-auto px-6 text-center text-white">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
+          <h1 className="font-playfair text-hero md:text-8xl font-bold mb-8 animate-fade-in-up leading-tight">
             Luxury Villa Estate
-            <span className="block text-luxury text-4xl md:text-5xl mt-4">
+            <span className="block text-luxury font-playfair text-hero-sm md:text-6xl mt-6 font-medium">
               Where Wellness Meets Elegance
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 animate-fade-in-up">
+          <p className="font-inter text-xl md:text-2xl mb-12 max-w-4xl mx-auto opacity-90 animate-fade-in-up leading-relaxed font-light">
             50 exclusive villas on 12 pristine acres, surrounded by water and nature, 
             designed for longevity, health, and sustainable luxury living.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-scale-in">
             <Button 
               size="lg" 
               variant="luxury" 
-              className="text-lg px-8 py-4"
+              className="text-lg px-10 py-5 font-inter"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Schedule a Visit <ArrowRight className="ml-2" />
@@ -96,7 +96,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="hero" 
-              className="text-lg px-8 py-4"
+              className="text-lg px-10 py-5 font-inter"
               onClick={generateBrochurePDF}
             >
               Download Brochure
@@ -108,11 +108,11 @@ const Index = () => {
       {/* About Section */}
       <section className="py-20 bg-gradient-luxury">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-8">
               A Sanctuary for Rejuvenation
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="font-inter text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
               Nestled just 30 km from Pune city, this exclusive estate offers an unparalleled living 
               experience with unpolluted air, lush greenery, and towering trees. Our vision prioritizes 
               cellular health, mental clarity, and resilience in harmony with nature.
@@ -123,9 +123,9 @@ const Index = () => {
             {features.map((feature, index) => (
               <Card key={index} className="shadow-card hover:shadow-luxury transition-all duration-300 transform hover:scale-105 animate-fade-in">
                 <CardContent className="p-8 text-center">
-                  <feature.icon className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                  <feature.icon className="w-14 h-14 text-primary mx-auto mb-6" />
+                  <h3 className="font-playfair text-2xl font-semibold mb-4 text-foreground">{feature.title}</h3>
+                  <p className="font-inter text-muted-foreground leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -138,10 +138,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+              <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
                 Cutting-Edge Technology & Modern Comforts
               </h2>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="font-inter text-xl text-muted-foreground mb-10 leading-relaxed font-light">
                 Each villa features smart automation systems integrated with IoT technology, 
                 providing residents with a seamless, customizable living experience designed 
                 for optimal health and wellness.
@@ -156,14 +156,14 @@ const Index = () => {
                 ))}
               </div>
 
-              <div className="mt-8">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Building Automation Systems</h3>
+                <div className="mt-12">
+                <h3 className="font-playfair text-3xl font-bold text-foreground mb-8">Building Automation Systems</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
                     <Shield className="w-6 h-6 text-primary mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Automated Security System</h4>
-                      <p className="text-muted-foreground">Sophisticated security with biometric access controls, facial recognition, and fingerprint scanning for entry into various zones</p>
+                      <h4 className="font-inter font-semibold text-foreground mb-2 text-lg">Automated Security System</h4>
+                      <p className="font-inter text-muted-foreground leading-relaxed">Sophisticated security with biometric access controls, facial recognition, and fingerprint scanning for entry into various zones</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -211,15 +211,15 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="mt-12">
-                <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Premium Brand Partnerships</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20">
-                    <CardContent className="p-6 text-center">
-                      <Zap className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <h4 className="font-bold text-foreground mb-2">Smart Home Tech</h4>
-                      <p className="text-luxury text-lg font-semibold">Loytec</p>
-                      <p className="text-muted-foreground text-sm mt-2">Advanced building automation systems</p>
+              <div className="mt-16">
+                <h3 className="font-playfair text-4xl font-bold text-foreground mb-10 text-center">Premium Brand Partnerships</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <Card className="shadow-card hover:shadow-luxury transition-all duration-300 border-luxury/20 hover:border-luxury/40">
+                    <CardContent className="p-8 text-center">
+                      <Zap className="w-10 h-10 text-primary mx-auto mb-4" />
+                      <h4 className="font-playfair font-bold text-foreground mb-3 text-lg">Smart Home Tech</h4>
+                      <p className="text-luxury text-xl font-bold">Loytec</p>
+                      <p className="font-inter text-muted-foreground text-sm mt-3">Advanced building automation systems</p>
                     </CardContent>
                   </Card>
 
@@ -335,45 +335,45 @@ const Index = () => {
             </div>
 
             <div className="animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+              <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
                 Focus on Healthy Living & Longevity
               </h2>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="font-inter text-xl text-muted-foreground mb-10 leading-relaxed font-light">
                 Our villas incorporate eco-friendly construction materials and intelligent design 
                 principles, promoting optimal indoor air quality, natural light, and ventilation 
                 to support long-term health and vitality.
               </p>
               
-              <div className="bg-card/50 rounded-lg p-6 mb-8 border border-luxury/20">
-                <p className="text-lg text-muted-foreground leading-relaxed">
+              <div className="bg-card/60 backdrop-blur-sm rounded-xl p-8 mb-10 border border-luxury/20 shadow-card">
+                <p className="font-inter text-lg text-muted-foreground leading-relaxed">
                   Experience a one-of-a-kind menu of cutting-edge therapies designed to meet specific health, 
-                  fitness, and aesthetic goals. World-renowned modalities like <strong className="text-primary">Whole Body Cryotherapy</strong>, 
-                  <strong className="text-primary">IV Drip Therapy</strong>, <strong className="text-primary">Red Light Therapy</strong>, 
-                  <strong className="text-primary">EMS Training</strong>, and many others, once reserved only for elite athletes 
+                  fitness, and aesthetic goals. World-renowned modalities like <strong className="text-primary font-semibold">Whole Body Cryotherapy</strong>, 
+                  <strong className="text-primary font-semibold">IV Drip Therapy</strong>, <strong className="text-primary font-semibold">Red Light Therapy</strong>, 
+                  <strong className="text-primary font-semibold">EMS Training</strong>, and many others, once reserved only for elite athletes 
                   and celebrities, form the backbone of our transformative health protocols – guaranteed to help you lose weight, 
                   look younger, build healthy habits, and feel truly energized. This isn't just any other wellness protocol – 
                   it's a carefully curated space where science and personalized care converge for the very best quality of life outcomes & results.
                 </p>
               </div>
               
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start space-x-4">
-                  <Sparkles className="w-6 h-6 text-primary mt-1" />
+              <div className="space-y-6 mb-10">
+                <div className="flex items-start space-x-5">
+                  <Sparkles className="w-7 h-7 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Biohacking Zones</h4>
-                    <p className="text-muted-foreground">Dedicated areas for infrared therapy, oxygen enrichment, and personalized wellness practices</p>
+                    <h4 className="font-inter font-semibold text-foreground mb-3 text-lg">Biohacking Zones</h4>
+                    <p className="font-inter text-muted-foreground leading-relaxed">Dedicated areas for infrared therapy, oxygen enrichment, and personalized wellness practices</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <Waves className="w-6 h-6 text-primary mt-1" />
+                <div className="flex items-start space-x-5">
+                  <Waves className="w-7 h-7 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Hydrotherapy Options</h4>
-                    <p className="text-muted-foreground">Private pools, saunas, and water-based wellness features for relaxation and detoxification</p>
+                    <h4 className="font-inter font-semibold text-foreground mb-3 text-lg">Hydrotherapy Options</h4>
+                    <p className="font-inter text-muted-foreground leading-relaxed">Private pools, saunas, and water-based wellness features for relaxation and detoxification</p>
                   </div>
                 </div>
               </div>
 
-              <Button variant="wellness" size="lg" className="shadow-card">
+              <Button variant="wellness" size="lg" className="shadow-card font-inter">
                 Learn About Wellness Features <ArrowRight className="ml-2" />
               </Button>
             </div>
@@ -384,11 +384,11 @@ const Index = () => {
       {/* Sustainability Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
               Sustainable & Green Living
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="font-inter text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
               The estate's landscape preserves existing trees and native flora, ensuring a close 
               connection with nature. Organic gardens and water recycling systems promote 
               sustainability and self-sufficiency.
@@ -404,27 +404,27 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="shadow-card hover:shadow-luxury transition-all duration-300 animate-fade-in">
-              <CardContent className="p-8 text-center">
-                <TreePine className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3 text-foreground">Preserved Ecosystem</h3>
-                <p className="text-muted-foreground">Existing trees and native flora maintained for authentic nature connection</p>
+            <Card className="shadow-card hover:shadow-luxury transition-all duration-300 animate-fade-in hover:border-primary/20">
+              <CardContent className="p-10 text-center">
+                <TreePine className="w-14 h-14 text-primary mx-auto mb-6" />
+                <h3 className="font-playfair text-2xl font-semibold mb-4 text-foreground">Preserved Ecosystem</h3>
+                <p className="font-inter text-muted-foreground leading-relaxed">Existing trees and native flora maintained for authentic nature connection</p>
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-luxury transition-all duration-300 animate-fade-in">
-              <CardContent className="p-8 text-center">
-                <Leaf className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3 text-foreground">Organic Living</h3>
-                <p className="text-muted-foreground">Organic gardens and sustainable food production systems</p>
+            <Card className="shadow-card hover:shadow-luxury transition-all duration-300 animate-fade-in hover:border-primary/20">
+              <CardContent className="p-10 text-center">
+                <Leaf className="w-14 h-14 text-primary mx-auto mb-6" />
+                <h3 className="font-playfair text-2xl font-semibold mb-4 text-foreground">Organic Living</h3>
+                <p className="font-inter text-muted-foreground leading-relaxed">Organic gardens and sustainable food production systems</p>
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-luxury transition-all duration-300 animate-fade-in">
-              <CardContent className="p-8 text-center">
-                <Waves className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3 text-foreground">Water Conservation</h3>
-                <p className="text-muted-foreground">Advanced water recycling and conservation systems</p>
+            <Card className="shadow-card hover:shadow-luxury transition-all duration-300 animate-fade-in hover:border-primary/20">
+              <CardContent className="p-10 text-center">
+                <Waves className="w-14 h-14 text-primary mx-auto mb-6" />
+                <h3 className="font-playfair text-2xl font-semibold mb-4 text-foreground">Water Conservation</h3>
+                <p className="font-inter text-muted-foreground leading-relaxed">Advanced water recycling and conservation systems</p>
               </CardContent>
             </Card>
           </div>
@@ -434,19 +434,19 @@ const Index = () => {
       {/* Location Section */}
       <section className="py-20 bg-gradient-luxury">
         <div className="container mx-auto px-6 text-center">
-          <div className="animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            <div className="animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-10">
               Prime Location, Serene Environment
             </h2>
-            <div className="flex items-center justify-center space-x-3 mb-8">
-              <MapPin className="w-6 h-6 text-primary" />
-              <span className="text-xl text-foreground font-semibold">Just 30 km from Pune City</span>
+            <div className="flex items-center justify-center space-x-4 mb-10">
+              <MapPin className="w-7 h-7 text-primary" />
+              <span className="font-inter text-2xl text-foreground font-semibold">Just 30 km from Pune City</span>
             </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="font-inter text-xl text-muted-foreground max-w-3xl mx-auto mb-16 leading-relaxed font-light">
               Experience the perfect balance of accessibility and tranquility. Close enough to the city 
               for convenience, yet far enough to enjoy unpolluted air and pristine natural surroundings.
             </p>
-            <Button variant="premium" size="lg" className="shadow-luxury">
+            <Button variant="premium" size="lg" className="shadow-luxury font-inter">
               View Location Details <ArrowRight className="ml-2" />
             </Button>
           </div>
@@ -456,9 +456,9 @@ const Index = () => {
       {/* Gallery Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Villa Gallery</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-6">Villa Gallery</h2>
+            <p className="font-inter text-xl text-muted-foreground max-w-2xl mx-auto font-light">
               Explore the exquisite interiors and sophisticated design of our luxury villas
             </p>
           </div>
@@ -614,11 +614,11 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-10">
               Begin Your Wellness Journey
             </h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
+            <p className="font-inter text-xl opacity-90 max-w-3xl mx-auto leading-relaxed font-light">
               Discover a lifestyle that supports cellular health, mental clarity, and resilience. 
               Contact us to schedule a private viewing of your future sanctuary.
             </p>
@@ -626,74 +626,74 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
-              <h3 className="text-2xl font-semibold mb-8">Get in Touch</h3>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <Phone className="w-6 h-6 text-luxury" />
+              <h3 className="font-playfair text-3xl font-semibold mb-10">Get in Touch</h3>
+              <div className="space-y-8">
+                <div className="flex items-center space-x-5">
+                  <Phone className="w-7 h-7 text-luxury" />
                   <div>
-                    <p className="font-semibold">Call Us</p>
-                    <p className="opacity-90">+91 989 578 7491</p>
+                    <p className="font-inter font-semibold text-lg">Call Us</p>
+                    <p className="font-inter opacity-90 text-lg">+91 989 578 7491</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <Mail className="w-6 h-6 text-luxury" />
+                <div className="flex items-center space-x-5">
+                  <Mail className="w-7 h-7 text-luxury" />
                   <div>
-                    <p className="font-semibold">Email</p>
-                    <p className="opacity-90">info@everluxeglobal.com</p>
+                    <p className="font-inter font-semibold text-lg">Email</p>
+                    <p className="font-inter opacity-90 text-lg">info@everluxeglobal.com</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <MapPin className="w-6 h-6 text-luxury" />
+                <div className="flex items-center space-x-5">
+                  <MapPin className="w-7 h-7 text-luxury" />
                   <div>
-                    <p className="font-semibold">Location</p>
-                    <p className="opacity-90">30 km from Pune, Maharashtra</p>
+                    <p className="font-inter font-semibold text-lg">Location</p>
+                    <p className="font-inter opacity-90 text-lg">30 km from Pune, Maharashtra</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="animate-scale-in">
-              <Card className="shadow-luxury">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-semibold text-foreground mb-6">Request Information</h3>
-                  <div className="space-y-4">
-                    <input 
-                      type="text" 
-                      placeholder="Your Name" 
-                      className="w-full p-4 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                    />
-                    <input 
-                      type="email" 
-                      placeholder="Email Address" 
-                      className="w-full p-4 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                    />
-                    <input 
-                      type="tel" 
-                      placeholder="Phone Number" 
-                      className="w-full p-4 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                    />
-                    <textarea 
-                      placeholder="Tell us about your interests" 
-                      rows={4}
-                      className="w-full p-4 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
-                    />
-                    <Button variant="luxury" size="lg" className="w-full shadow-luxury">
-                      Submit Inquiry <ArrowRight className="ml-2" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                <Card className="shadow-luxury">
+                  <CardContent className="p-10">
+                    <h3 className="font-playfair text-3xl font-semibold text-foreground mb-8">Request Information</h3>
+                    <div className="space-y-6">
+                      <input 
+                        type="text" 
+                        placeholder="Your Name" 
+                        className="w-full p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent font-inter"
+                      />
+                      <input 
+                        type="email" 
+                        placeholder="Email Address" 
+                        className="w-full p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent font-inter"
+                      />
+                      <input 
+                        type="tel" 
+                        placeholder="Phone Number" 
+                        className="w-full p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent font-inter"
+                      />
+                      <textarea 
+                        placeholder="Tell us about your interests" 
+                        rows={4}
+                        className="w-full p-5 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent resize-none font-inter"
+                      />
+                      <Button variant="luxury" size="lg" className="w-full shadow-luxury font-inter">
+                        Submit Inquiry <ArrowRight className="ml-2" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-foreground text-background">
+      <footer className="py-16 bg-foreground text-background">
         <div className="container mx-auto px-6 text-center">
-          <h3 className="text-2xl font-bold mb-4 text-luxury">Luxury Villa Estate</h3>
-          <p className="opacity-80 mb-6">Where Wellness Meets Elegance</p>
-          <p className="text-sm opacity-60">
+          <h3 className="font-playfair text-3xl font-bold mb-6 text-luxury">Luxury Villa Estate</h3>
+          <p className="font-inter opacity-80 mb-8 text-lg">Where Wellness Meets Elegance</p>
+          <p className="font-inter text-sm opacity-60">
             © 2024 Luxury Villa Estate. All rights reserved. | Privacy Policy | Terms of Service
           </p>
         </div>

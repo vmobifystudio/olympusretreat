@@ -18,6 +18,14 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
+			fontSize: {
+				'hero': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+				'hero-sm': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -134,6 +142,14 @@ export default {
 						transform: 'scale(1.02)',
 						boxShadow: '0 0 30px hsl(var(--primary-glow) / 0.4)'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
@@ -142,7 +158,8 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
-				'luxury-glow': 'luxury-glow 3s ease-in-out infinite'
+				'luxury-glow': 'luxury-glow 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -153,7 +170,8 @@ export default {
 			boxShadow: {
 				'luxury': 'var(--shadow-luxury)',
 				'card': 'var(--shadow-card)',
-				'elegant': 'var(--shadow-elegant)'
+				'elegant': 'var(--shadow-elegant)',
+				'glow': 'var(--shadow-glow)'
 			}
 		}
 	},
