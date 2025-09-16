@@ -532,12 +532,55 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="py-16 bg-foreground text-background">
-        <div className="container mx-auto px-6 text-center">
-          <h3 className="font-playfair text-3xl font-bold mb-6 text-luxury">Luxury Villa Estate</h3>
-          <p className="font-inter opacity-80 mb-8 text-lg">Where Wellness Meets Elegance</p>
-          <p className="font-inter text-sm opacity-60">
-            © 2024 Luxury Villa Estate. All rights reserved. | Privacy Policy | Terms of Service
-          </p>
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h3 className="font-playfair text-3xl font-bold mb-6 text-luxury">Luxury Villa Estate</h3>
+            <p className="font-inter opacity-80 mb-8 text-lg">Where Wellness Meets Elegance</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center md:text-left">
+              <h4 className="font-playfair text-xl font-bold mb-4 text-luxury">Contact Info</h4>
+              <div className="space-y-2">
+                <p className="font-inter opacity-80">+91 989 578 7491</p>
+                <p className="font-inter opacity-80">info@everluxeglobal.com</p>
+                <p className="font-inter opacity-80">30 km from Pune, Maharashtra</p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <h4 className="font-playfair text-xl font-bold mb-4 text-luxury">Quick Links</h4>
+              <div className="space-y-2">
+                <p className="font-inter opacity-80">Villa Gallery</p>
+                <p className="font-inter opacity-80">Wellness Programs</p>
+                <p className="font-inter opacity-80">Sustainability</p>
+              </div>
+            </div>
+            
+            <div className="text-center md:text-right">
+              <h4 className="font-playfair text-xl font-bold mb-4 text-luxury">Legal</h4>
+              <div className="space-y-2">
+                <a 
+                  href="/privacy-policy" 
+                  className="font-inter opacity-80 hover:opacity-100 transition-opacity block"
+                >
+                  Privacy Policy
+                </a>
+                <a 
+                  href="/terms-of-service" 
+                  className="font-inter opacity-80 hover:opacity-100 transition-opacity block"
+                >
+                  Terms of Service
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-white/20 pt-8 text-center">
+            <p className="font-inter text-sm opacity-60">
+              © 2024 Luxury Villa Estate. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
